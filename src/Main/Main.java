@@ -19,8 +19,10 @@ public class Main {
 
 		boolean salir = false;
 		int opcion;
+		int cantidad=0;
 		sc = new Scanner(System.in);
-		Equipo[] arrayEquipos = new Equipo[2]; //cambiar dependiendo la cantidad de equipos
+		
+		Equipo[] arrayEquipos = null; 
 		JSONObject jsonObject = new JSONObject();
 
 		while (!salir) {
@@ -48,7 +50,10 @@ public class Main {
 					int gc = 0;
 					int dfg = 0;
 					int pts = 0;
-
+					
+					System.out.println("Ingrese cantidad de Equipos");
+					cantidad=sc.nextInt();
+					arrayEquipos=new Equipo[cantidad];
 					for (int x = 0; x < arrayEquipos.length; x++) {
 						sc = new Scanner(System.in);
 						System.out.println("Ingrese Equipo:");
